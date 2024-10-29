@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Lukas/RiderProjects/TankGame/TankGame/Content/Tank_Body.png","C:/Users/Lukas/RiderProjects/TankGame/TankGame/Content/bin/Windows/Tank_Body.xnb","TextureProcessor","Texture2DContent",830,4181,0,1109602
+"C:/Users/Lukas/RiderProjects/TankGame/TankGame/Content/Tank_Turret.png","C:/Users/Lukas/RiderProjects/TankGame/TankGame/Content/bin/Windows/Tank_Turret.xnb","TextureProcessor","Texture2DContent",642,6229,0,001969
