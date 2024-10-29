@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TankGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45080d5bdac683da487b4461236e0d306a64f34c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3e4f15ce6534214f4e0e12b5593b6bbb2f031f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("TankGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TankGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
