@@ -15,7 +15,7 @@ public class Sprite : DrawableGameComponent
     private Vector2 _size;
     public Vector2 Size
     {
-        set => _size = new Vector2(Texture.Width * value.X, Texture.Height * value.Y);
+        set => _size = new Vector2(Texture.Width * value.X, Texture.Height * value.Y) * (game != null ? game.GameSize : 1);
         get => _size;
     }
     public Vector2 Origin;

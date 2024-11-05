@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -16,6 +17,8 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     public SpriteBatch SpriteBatch;
     private Player _player;
+    private Enemy _enemy;
+    public float GameSize = 4f;
 
     public Game1()
     {
@@ -45,19 +48,13 @@ public class Game1 : Game
 
         // TODO: use this.Content to load your game content here
         
-        _player = new Player(this, driveSpeed: 150f, texture: Content.Load<Texture2D>("Tank_Body"), size: Vector2.One * 3);
-        _player.Position = new Vector2(1920 / 3, 1080 / 3);
+        _player = new(this, driveSpeed: 175f, texture: Content.Load<Texture2D>("Tank_Body"), turretTexture: Content.Load<Texture2D>("Tank_Turret"));
+        _player.Position = new(GraphicsDevice.Viewport.Width / 2f, GraphicsDevice.Viewport.Height / 2f);
         Components.Add(_player);
-        // foreach (object c in Components)
-        // {
-        //     if (c is IDamageable)
-        //     {
-        //         Console.WriteLine(_player.Health);
-        //         ((IDamageable)c).Damage(1f);
-        //         Console.WriteLine(_player.Health);
-        //     }
-        // }
-
+        
+        _enemy = new(this, _player, driveSpeed: 150f, texture: Content.Load<Texture2D>("EnemyTank_Body"), turretTexture: Content.Load<Texture2D>("EnemyTank_Turret"));
+        _enemy.Position = new(GraphicsDevice.Viewport.Width / 4f, GraphicsDevice.Viewport.Height / 4f);
+        Components.Add(_enemy);
     }
 
     protected override void Update(GameTime gameTime)
@@ -67,6 +64,16 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
+        
+        foreach (var component in Components.ToList())
+        {
+            if (component is not Projectile projectile) continue;
+            foreach (var comp in Components.ToList())
+            {
+                if (comp is Tank tank && (projectile.Position - tank.Position).Length() < (tank.CollRadius + projectile.CollRadius) && comp is IDamageable damageable)
+                    projectile.OnHit(damageable);
+            }
+        }
 
         base.Update(gameTime);
     }

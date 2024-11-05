@@ -30,3 +30,7 @@ C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\
 C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\Tank_Body.xnb
 C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\Tank_Turret.xnb
 C:\Users\Lukas\RiderProjects\TankGame\TankGame\obj\Debug\net8.0-windows\TankGame.sourcelink.json
+C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\EnemyTank_Body.xnb
+C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\EnemyTank_Turret.xnb
+C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\Tank_Projectile.xnb
+C:\Users\Lukas\RiderProjects\TankGame\TankGame\bin\Debug\net8.0-windows\Content\Explosion.xnb
