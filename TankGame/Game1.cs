@@ -18,7 +18,7 @@ public class Game1 : Game
     public SpriteBatch SpriteBatch;
     private Player _player;
     private Enemy _enemy;
-    public float GameSize = 4f;
+    public float GameSize = 3f;
 
     public Game1()
     {
